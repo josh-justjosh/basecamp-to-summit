@@ -41,32 +41,32 @@ def alivetime():
     return "Uptime: "+out
 
 climbing = "Climbing Logo.png"
-phantom = "Phantom Media Logo.png"
+phantom = "Phantom Media Logo - black.png"
 
 completedclimbs = 0
 climbstogo = 681 - completedclimbs
 requests.get("https://sequematic.com/variable-change/2293/85A7210D14/Climbing/="+str(completedclimbs))
 
 my_w = tk.Tk()
-climbs = tk.Label(my_w, text=str(completedclimbs),bg="black",fg="white",font=("Arial", 200,  'bold'))
+climbs = tk.Label(my_w, text=str(completedclimbs),bg="white",fg="black",font=("Arial", 200,  'bold'))
 climbs.place(relx=0.3, rely=0.3, anchor='center')
-climbslbl = tk.Label(my_w, text="Climbs\nComplete",bg="black",fg="white",font=("Arial", 50,  'bold'))
+climbslbl = tk.Label(my_w, text="Climbs\nComplete",bg="white",fg="black",font=("Arial", 50,  'bold'))
 climbslbl.place(relx=0.3, rely=0.5, anchor='center')
-ctg = tk.Label(my_w, text=str(climbstogo),bg="black",fg="white",font=("Arial", 200,  'bold'))
+ctg = tk.Label(my_w, text=str(climbstogo),bg="white",fg="black",font=("Arial", 200,  'bold'))
 ctg.place(relx=0.7, rely=0.3, anchor='center')
-ctglbl = tk.Label(my_w, text="Climbs\nto Go",bg="black",fg="white",font=("Arial", 50,  'bold'))
+ctglbl = tk.Label(my_w, text="Climbs\nto Go",bg="white",fg="black",font=("Arial", 50,  'bold'))
 ctglbl.place(relx=0.7, rely=0.5, anchor='center')
-meters = tk.Label(my_w, text=str(round(completedclimbs*12.9939207048)),bg="black",fg="white",font=("Arial", 150,  'bold'))
+meters = tk.Label(my_w, text=str(round(completedclimbs*12.9939207048)),bg="white",fg="black",font=("Arial", 150,  'bold'))
 meters.place(relx=0.3, rely=0.75, anchor='center')
-meterslbl = tk.Label(my_w, text="Meters\nClimbed",bg="black",fg="white",font=("Arial", 40,  'bold'))
+meterslbl = tk.Label(my_w, text="Meters\nClimbed",bg="white",fg="black",font=("Arial", 40,  'bold'))
 meterslbl.place(relx=0.3, rely=0.9, anchor='center')
-mtg = tk.Label(my_w, text=str(round(climbstogo*12.9939207048,1)),bg="black",fg="white",font=("Arial", 150,  'bold'))
+mtg = tk.Label(my_w, text=str(round(climbstogo*12.9939207048,1)),bg="white",fg="black",font=("Arial", 150,  'bold'))
 mtg.place(relx=0.7, rely=0.75, anchor='center')
-mtglbl = tk.Label(my_w, text="Meters\nLeft",bg="black",fg="white",font=("Arial", 40,  'bold'))
+mtglbl = tk.Label(my_w, text="Meters\nLeft",bg="white",fg="black",font=("Arial", 40,  'bold'))
 mtglbl.place(relx=0.7, rely=0.9, anchor='center')
-title = tk.Label(my_w, text="Basecamp to Summit",bg="black",fg="white",font=("Arial", 50, 'bold'))
+title = tk.Label(my_w, text="Basecamp to Summit",bg="white",fg="black",font=("Arial", 50, 'bold'))
 title.place(relx=0.5, rely=0.05, anchor='center')
-alive = tk.Label(my_w, text=alivetime(),bg="black",fg="white",font=("Arial", 5,  'bold'))
+alive = tk.Label(my_w, text=alivetime(),bg="white",fg="black",font=("Arial", 5,  'bold'))
 alive.place(relx=1, rely=1, anchor='se')
 
 image1 = Image.open(climbing).resize((250, 250))
@@ -74,7 +74,7 @@ test = ImageTk.PhotoImage(image1)
 
 climbinglogo = tk.Label(image=test)
 climbinglogo.image = test
-climbinglogo.configure(bg='black')
+climbinglogo.configure(bg='white')
 climbinglogo.place(relx=0.1, rely=0.15, anchor='center')
 
 image2 = Image.open(phantom).resize((250, 250))
@@ -82,14 +82,14 @@ test = ImageTk.PhotoImage(image2)
 
 phantomlogo = tk.Label(image=test)
 phantomlogo.image = test
-phantomlogo.configure(bg='black')
+phantomlogo.configure(bg='white')
 phantomlogo.place(relx=0.9, rely=0.15, anchor='center')
 
 width,height=875,875 # set the variables 
 c_width,c_height=width-5,height-5 # canvas width height
 d=str(width)+"x"+str(height)+"+3840+0"
 my_w.geometry(d)
-my_w.configure(bg='black')
+my_w.configure(bg='white')
 my_w.title("Basecamp to Summit")
 sw,sh = my_w.winfo_screenwidth(),my_w.winfo_screenheight()
 #pw("screen1:",sw,sh)
