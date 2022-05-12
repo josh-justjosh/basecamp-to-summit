@@ -121,7 +121,7 @@ def decrease():
 
 def loop():
     alive.config(text=alivetime())
-    if keyboard.is_pressed("ctrl+right"):
+    if keyboard.is_pressed("b"):
         increase()
         time.sleep(1)
     elif keyboard.is_pressed("ctrl+left"):
