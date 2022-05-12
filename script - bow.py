@@ -127,7 +127,7 @@ def loop():
     elif keyboard.is_pressed("ctrl+left"):
         decrease()
         time.sleep(1)
-    title.after(100,loop)
+    title.after(1,loop)
 
 my_w.attributes("-fullscreen", True)
 loop()
