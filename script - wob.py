@@ -43,7 +43,7 @@ def alivetime():
 climbing = "Climbing Logo.png"
 phantom = "Phantom Media Logo - white.png"
 
-completedclimbs = 0
+completedclimbs = 675
 climbstogo = 681 - completedclimbs
 requests.get("https://sequematic.com/variable-change/2293/85A7210D14/Climbing/="+str(completedclimbs))
 
